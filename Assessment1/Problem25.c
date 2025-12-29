@@ -1,13 +1,29 @@
 #include <stdio.h>
 
 int main() {
-    int a;
-    scanf("%d",&a);
+    int x,y;
+    printf("Enter Number:");
+    scanf("%d",&x);
+    y=((x-x%100)/100)+((x%100-x%10)/10)+(x%10);
+    y=y<10?y:((y-y%100)/100)+((y%100-y%10)/10)+(y%10);
+    y=y<10?y:((y-y%100)/100)+((y%100-y%10)/10)+(y%10);
+    y=y<10?y:((y-y%100)/100)+((y%100-y%10)/10)+(y%10);
+    printf("Result= %d",y);
+    return 0;
+}
+//Alternate Solution
+#include <stdio.h>
+
+int main() {
+    int x,y;
+    printf("Enter Number:");
+    scanf("%d",&x);
+    y=((x-x%100)/100)+((x%100-x%10)/10)+(x%10);
     do   
     {
-        a=((a-a%100)/100)+((a%100-a%10)/10)+(a%10);
+        y=((y-y%100)/100)+((y%100-y%10)/10)+(y%10);
         
-    }while(a%10!=a);
-    printf("%d",a);
+    }while(y%10!=y);//(y<10)
+    printf("Result= %d",x);
     return 0;
 }
