@@ -1,8 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    int a;
-    scanf("%d",&a);
-    printf("%d",a/6);
+    int x,y;
+    printf("Enter Number:");
+    scanf("%d",&x);
+    y=x/6;
+    printf("Result= %d",y);
     return 0;
 }
