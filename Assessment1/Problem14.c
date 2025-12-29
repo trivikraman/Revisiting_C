@@ -1,8 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    int a;
-    scanf("%d",&a);
-    printf("%d%d%d",a%10,(a%100-a%10)/10,(a-a%100)/100);
+    int x,y;
+    printf("Enter Number:");
+    scanf("%d",&x);
+    y=(x%10)*100+((x%100)-(x%10))+(x-x%100)/100;
+    printf("Result= %d",y);
     return 0;
 }
