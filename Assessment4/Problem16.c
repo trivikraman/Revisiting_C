@@ -2,24 +2,29 @@
 
 int main()
 {
-    int n, i = 2, flag = 0;
+    int x=0, n, i = 2, flag = 0;
     scanf("%d", &n);
-    if (n <= 1)
+    loop:if (x < 6)
     {
-        printf("Not Prime");
-        return 0;
-    }
-    do
-    {
-        if (n % i == 0)
+        if (n <= 1)
         {
-            flag = 1;
-            break;
+            printf("Not Prime");
+            return 0;
         }
-        i++;
-    } while (i <= n / 2);
-    if (flag == 0)
-        printf("Prime");
-    else
-        printf("Not Prime");
+        do
+        {
+            if (n % i == 0)
+            {
+                flag = 1;
+                break;
+            }
+            i++;
+        } while (i <= n / 2);
+        if (flag == 0)
+            printf("Prime");
+        else
+            printf("Not Prime");
+        x = 6;
+        goto loop;
+    }
 }
